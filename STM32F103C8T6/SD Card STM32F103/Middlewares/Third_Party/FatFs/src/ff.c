@@ -433,65 +433,65 @@ typedef struct {
 / structure member because the structure is not binary compatible between
 / different platforms */
 
-#define BS_jmpBoot			0		/* x86 jump instruction (3) */
-#define BS_OEMName			3		/* OEM name (8) */
+#define BS_jmpBoot		0		/* x86 jump instruction (3) */
+#define BS_OEMName		3		/* OEM name (8) */
 #define BPB_BytsPerSec		11		/* Sector size [byte] (2) */
 #define BPB_SecPerClus		13		/* Cluster size [sector] (1) */
 #define BPB_RsvdSecCnt		14		/* Size of reserved area [sector] (2) */
-#define BPB_NumFATs			16		/* Number of FAT copies (1) */
+#define BPB_NumFATs		16		/* Number of FAT copies (1) */
 #define BPB_RootEntCnt		17		/* Number of root directory entries for FAT12/16 (2) */
 #define BPB_TotSec16		19		/* Volume size [sector] (2) */
-#define BPB_Media			21		/* Media descriptor (1) */
-#define BPB_FATSz16			22		/* FAT size [sector] (2) */
+#define BPB_Media		21		/* Media descriptor (1) */
+#define BPB_FATSz16		22		/* FAT size [sector] (2) */
 #define BPB_SecPerTrk		24		/* Track size [sector] (2) */
 #define BPB_NumHeads		26		/* Number of heads (2) */
-#define BPB_HiddSec			28		/* Number of special hidden sectors (4) */
+#define BPB_HiddSec		28		/* Number of special hidden sectors (4) */
 #define BPB_TotSec32		32		/* Volume size [sector] (4) */
-#define BS_DrvNum			36		/* Physical drive number (2) */
-#define BS_BootSig			38		/* Extended boot signature (1) */
-#define BS_VolID			39		/* Volume serial number (4) */
-#define BS_VolLab			43		/* Volume label (8) */
+#define BS_DrvNum		36		/* Physical drive number (2) */
+#define BS_BootSig		38		/* Extended boot signature (1) */
+#define BS_VolID		39		/* Volume serial number (4) */
+#define BS_VolLab		43		/* Volume label (8) */
 #define BS_FilSysType		54		/* File system type (1) */
-#define BPB_FATSz32			36		/* FAT size [sector] (4) */
+#define BPB_FATSz32		36		/* FAT size [sector] (4) */
 #define BPB_ExtFlags		40		/* Extended flags (2) */
-#define BPB_FSVer			42		/* File system version (2) */
+#define BPB_FSVer		42		/* File system version (2) */
 #define BPB_RootClus		44		/* Root directory first cluster (4) */
-#define BPB_FSInfo			48		/* Offset of FSINFO sector (2) */
+#define BPB_FSInfo		48		/* Offset of FSINFO sector (2) */
 #define BPB_BkBootSec		50		/* Offset of backup boot sector (2) */
-#define BS_DrvNum32			64		/* Physical drive number (2) */
+#define BS_DrvNum32		64		/* Physical drive number (2) */
 #define BS_BootSig32		66		/* Extended boot signature (1) */
-#define BS_VolID32			67		/* Volume serial number (4) */
-#define BS_VolLab32			71		/* Volume label (8) */
+#define BS_VolID32		67		/* Volume serial number (4) */
+#define BS_VolLab32		71		/* Volume label (8) */
 #define BS_FilSysType32		82		/* File system type (1) */
-#define	FSI_LeadSig			0		/* FSI: Leading signature (4) */
+#define	FSI_LeadSig		0		/* FSI: Leading signature (4) */
 #define	FSI_StrucSig		484		/* FSI: Structure signature (4) */
 #define	FSI_Free_Count		488		/* FSI: Number of free clusters (4) */
 #define	FSI_Nxt_Free		492		/* FSI: Last allocated cluster (4) */
-#define MBR_Table			446		/* MBR: Partition table offset (2) */
-#define	SZ_PTE				16		/* MBR: Size of a partition table entry */
-#define BS_55AA				510		/* Signature word (2) */
+#define MBR_Table		446		/* MBR: Partition table offset (2) */
+#define	SZ_PTE			16		/* MBR: Size of a partition table entry */
+#define BS_55AA			510		/* Signature word (2) */
 
-#define	DIR_Name			0		/* Short file name (11) */
-#define	DIR_Attr			11		/* Attribute (1) */
-#define	DIR_NTres			12		/* Lower case flag (1) */
+#define	DIR_Name		0		/* Short file name (11) */
+#define	DIR_Attr		11		/* Attribute (1) */
+#define	DIR_NTres		12		/* Lower case flag (1) */
 #define DIR_CrtTimeTenth	13		/* Created time sub-second (1) */
-#define	DIR_CrtTime			14		/* Created time (2) */
-#define	DIR_CrtDate			16		/* Created date (2) */
+#define	DIR_CrtTime		14		/* Created time (2) */
+#define	DIR_CrtDate		16		/* Created date (2) */
 #define DIR_LstAccDate		18		/* Last accessed date (2) */
 #define	DIR_FstClusHI		20		/* Higher 16-bit of first cluster (2) */
-#define	DIR_WrtTime			22		/* Modified time (2) */
-#define	DIR_WrtDate			24		/* Modified date (2) */
+#define	DIR_WrtTime		22		/* Modified time (2) */
+#define	DIR_WrtDate		24		/* Modified date (2) */
 #define	DIR_FstClusLO		26		/* Lower 16-bit of first cluster (2) */
 #define	DIR_FileSize		28		/* File size (4) */
-#define	LDIR_Ord			0		/* LFN entry order and LLE flag (1) */
-#define	LDIR_Attr			11		/* LFN attribute (1) */
-#define	LDIR_Type			12		/* LFN type (1) */
-#define	LDIR_Chksum			13		/* Sum of corresponding SFN entry */
+#define	LDIR_Ord		0		/* LFN entry order and LLE flag (1) */
+#define	LDIR_Attr		11		/* LFN attribute (1) */
+#define	LDIR_Type		12		/* LFN type (1) */
+#define	LDIR_Chksum		13		/* Sum of corresponding SFN entry */
 #define	LDIR_FstClusLO		26		/* Must be zero (0) */
-#define	SZ_DIRE				32		/* Size of a directory entry */
-#define	LLEF				0x40	/* Last long entry flag in LDIR_Ord */
-#define	DDEM				0xE5	/* Deleted directory entry mark at DIR_Name[0] */
-#define	RDDEM				0x05	/* Replacement of the character collides with DDEM */
+#define	SZ_DIRE			32		/* Size of a directory entry */
+#define	LLEF			0x40		/* Last long entry flag in LDIR_Ord */
+#define	DDEM			0xE5		/* Deleted directory entry mark at DIR_Name[0] */
+#define	RDDEM			0x05		/* Replacement of the character collides with DDEM */
 
 
 
